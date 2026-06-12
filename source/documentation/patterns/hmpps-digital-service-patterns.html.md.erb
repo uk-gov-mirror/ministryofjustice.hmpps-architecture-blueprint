@@ -4,67 +4,73 @@ title: HMPPS Digital Service Patterns
 
 # HMPPS Digital Service Patterns
 
-You can use these patterns to design an HMPPS Digital service that will seamlessly integrate with the HMPPS Digital platform. Application of these patterns in your service will shape the technical design to ensure it works with other platform components and can be monitored, managed and supported effectively within HMPPS Digital.
+Using technical patterns to design an HMPPS Digital service ensures products seamlessly integrate with the HMPPS Digital platform. Application of these patterns in a service will shape the technical design to align user experience, integration, monitoring, management and support.
+
+The pattern definitions available via the [internal HMPPS patterns library documentation](http://ministryofjustice.github.io/hmpps-architecture-patterns)
+
+The patterns cover a range of technical areas including
 
 ## Application Architecture
 
-- [Build shared HMPPS Domain services where appropriate](./build-hmpps-domain-services.html)
-- [Separate presentation logic and orchestration into different applications](./separate-ui-api-applications.html)
+- Technical strategy and domain-led data strategy
+- Approved technology list and standard implementation patterns
+- Guidance on processes for working outside of the current technical guardrails
+- HMPPS portfolio registration
+- Guidance on build and buy decisions
+- Guardrails for the use of AI tooling
 
-## Hosting and Application Deployment
-- [Host services on MoJ Cloud Platform](./host-services-on-moj-cloud-platform.html)
-- Create application repositories using standard HMPPS tooling
-- Deploy applications using HMPPS GitHub Actions templates
+## Application Security
+
+- Methods and support for threat modelling processes
+- Cyber security incident processes
+
+## Development
+
+- Template applications to help setup of new projects
+- Guidance on management and use of HMPPS reference data
+- Standard API implementation patterns
+- Implementing audit of user activity
+
+## Operations
+
+- Template infrastructure code to help setup of new project hosting environments
+- Template deployment pipelines, operations and continuous security tooling
+- Standard support and incident processes
+
+## Technical Governance
+
+- Information on HMPPS and MoJ technical governance processes
+- Guidance on acceptance into live service activities
 
 ## Monitoring and Alerting
-- Implement infrastructure-level monitoring and alerting using Cloud Platform
-- Implement application-level alerting using Sentry
+
+- Standard application monitoring for baseline operations
+- Guidance on adding additional monitoring and alerting for at both the application and infrastructure level
 
 ## Analytics
-- Implement application analytics using Application Insights
-- Implement user analytics using Application Insights 'Click Analytics'
+
+- Standard tooling and usage patterns for application-level telemetry and exception reporting
+- /Guidance on implementing web analytics/
 
 ## Identity, Authentication and Authorisation
-- Implement user single sign-on using HMPPS Auth
-- Implement platform-level user access controls using HMPPS Auth and identity provider roles
-- Implement internal application user access controls locally
-- Implement service-to-service authentication using HMPPS Auth machine credentials
 
-## Communication
+- Implementing HMPPS single sign-on
+- Implementing HMPPS role-based access control (RBAC) and attribute-based access control (ABAC)
 
-### Outbound Communication
-- Publish HMPPS Domain Events to inform other services of important activity
-- Publish APIs to provide other HMPPS services with detailed information
+## Communication and Integration
 
-### Inbound Communication
-- Consume HMPPS Domain Events to understand important activity across the estate
-
-### External Communication
-- Exchange data with external parties such as other government agencies using the HMPPS External API
-
----
-
-# Probation-Specific Patterns
-
-Specific patterns for use when building Probation Digital Services applications
-
-## Entry Point Services
-- [Provide a summary API for use in entry point services](./provide-summary-api.html)
-- [Publish UI components to control display of domain data](./publish-ui-components.html)
+- Methods of both outbound and inbound communication and integration between HMPPS digital services
+- Approaches to managed communication with external agencies
 
 ## UI and Navigation
-- Implement shared UI components using Probation Front End
 
-## Searching
-- Search for People on Probation using Probation Search services
-- Search for supervision history using Probation Search services
+- Use of reusable user interface components
+- Information architecture
 
----
+## Backup and Data Retention
 
-# Prison-Specific Patterns
+- Standard methods of backup and use of data storage infrastructure to comply with data retention policies
 
-Specific patterns for use when building Digital Prisons Services applications
+## Reporting
 
-## Entry Point Services
-
-- Implement shared UI and navigation using DPS Connected Services
+- Use of standard HMPPS reporting platforms
